@@ -10,6 +10,16 @@
 		E3895B4A2087906A0075B96A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3895B492087906A0075B96A /* AppDelegate.swift */; };
 		E3895B4C2087906B0075B96A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E3895B4B2087906B0075B96A /* Assets.xcassets */; };
 		E3895B4F2087906B0075B96A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E3895B4D2087906B0075B96A /* LaunchScreen.storyboard */; };
+		E3895B662087956B0075B96A /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3895B652087956B0075B96A /* MainViewController.swift */; };
+		E3895B69208795AE0075B96A /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3895B67208795AE0075B96A /* HomeViewController.swift */; };
+		E3895B6A208795AE0075B96A /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E3895B68208795AE0075B96A /* HomeViewController.xib */; };
+		E3895B6D208795C00075B96A /* LiveViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3895B6B208795C00075B96A /* LiveViewController.swift */; };
+		E3895B6E208795C00075B96A /* LiveViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E3895B6C208795C00075B96A /* LiveViewController.xib */; };
+		E3895B71208795D30075B96A /* FollowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3895B6F208795D30075B96A /* FollowViewController.swift */; };
+		E3895B72208795D30075B96A /* FollowViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E3895B70208795D30075B96A /* FollowViewController.xib */; };
+		E3895B75208795E50075B96A /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3895B73208795E50075B96A /* ProfileViewController.swift */; };
+		E3895B76208795E50075B96A /* ProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E3895B74208795E50075B96A /* ProfileViewController.xib */; };
+		E3895B782087960A0075B96A /* NetworkTools.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3895B772087960A0075B96A /* NetworkTools.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -18,6 +28,16 @@
 		E3895B4B2087906B0075B96A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E3895B4E2087906B0075B96A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E3895B502087906B0075B96A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E3895B652087956B0075B96A /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		E3895B67208795AE0075B96A /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		E3895B68208795AE0075B96A /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
+		E3895B6B208795C00075B96A /* LiveViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LiveViewController.swift; sourceTree = "<group>"; };
+		E3895B6C208795C00075B96A /* LiveViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LiveViewController.xib; sourceTree = "<group>"; };
+		E3895B6F208795D30075B96A /* FollowViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowViewController.swift; sourceTree = "<group>"; };
+		E3895B70208795D30075B96A /* FollowViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FollowViewController.xib; sourceTree = "<group>"; };
+		E3895B73208795E50075B96A /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		E3895B74208795E50075B96A /* ProfileViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileViewController.xib; sourceTree = "<group>"; };
+		E3895B772087960A0075B96A /* NetworkTools.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkTools.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +95,8 @@
 		E3895B5D208793F00075B96A /* Profile */ = {
 			isa = PBXGroup;
 			children = (
+				E3895B73208795E50075B96A /* ProfileViewController.swift */,
+				E3895B74208795E50075B96A /* ProfileViewController.xib */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -82,6 +104,7 @@
 		E3895B5E208793F00075B96A /* Tools */ = {
 			isa = PBXGroup;
 			children = (
+				E3895B772087960A0075B96A /* NetworkTools.swift */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -89,6 +112,8 @@
 		E3895B5F208793F00075B96A /* Live */ = {
 			isa = PBXGroup;
 			children = (
+				E3895B6B208795C00075B96A /* LiveViewController.swift */,
+				E3895B6C208795C00075B96A /* LiveViewController.xib */,
 			);
 			path = Live;
 			sourceTree = "<group>";
@@ -96,6 +121,7 @@
 		E3895B60208793F00075B96A /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				E3895B652087956B0075B96A /* MainViewController.swift */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -103,6 +129,8 @@
 		E3895B61208793F00075B96A /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				E3895B67208795AE0075B96A /* HomeViewController.swift */,
+				E3895B68208795AE0075B96A /* HomeViewController.xib */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -110,6 +138,8 @@
 		E3895B62208793F00075B96A /* Follow */ = {
 			isa = PBXGroup;
 			children = (
+				E3895B6F208795D30075B96A /* FollowViewController.swift */,
+				E3895B70208795D30075B96A /* FollowViewController.xib */,
 			);
 			path = Follow;
 			sourceTree = "<group>";
@@ -172,8 +202,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E3895B76208795E50075B96A /* ProfileViewController.xib in Resources */,
 				E3895B4C2087906B0075B96A /* Assets.xcassets in Resources */,
+				E3895B72208795D30075B96A /* FollowViewController.xib in Resources */,
 				E3895B4F2087906B0075B96A /* LaunchScreen.storyboard in Resources */,
+				E3895B6E208795C00075B96A /* LiveViewController.xib in Resources */,
+				E3895B6A208795AE0075B96A /* HomeViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -184,7 +218,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E3895B782087960A0075B96A /* NetworkTools.swift in Sources */,
+				E3895B75208795E50075B96A /* ProfileViewController.swift in Sources */,
+				E3895B662087956B0075B96A /* MainViewController.swift in Sources */,
 				E3895B4A2087906A0075B96A /* AppDelegate.swift in Sources */,
+				E3895B71208795D30075B96A /* FollowViewController.swift in Sources */,
+				E3895B6D208795C00075B96A /* LiveViewController.swift in Sources */,
+				E3895B69208795AE0075B96A /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -322,6 +362,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = BASE472HZE;
 				INFOPLIST_FILE = DouYuZB/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -341,6 +382,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = BASE472HZE;
 				INFOPLIST_FILE = DouYuZB/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
