@@ -50,12 +50,60 @@
 		E3895B482087906A0075B96A /* DouYuZB */ = {
 			isa = PBXGroup;
 			children = (
+				E3895B562087924E0075B96A /* Classes */,
 				E3895B492087906A0075B96A /* AppDelegate.swift */,
 				E3895B4B2087906B0075B96A /* Assets.xcassets */,
 				E3895B4D2087906B0075B96A /* LaunchScreen.storyboard */,
 				E3895B502087906B0075B96A /* Info.plist */,
 			);
 			path = DouYuZB;
+			sourceTree = "<group>";
+		};
+		E3895B562087924E0075B96A /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				E3895B572087924E0075B96A /* Home */,
+				E3895B582087924E0075B96A /* Tools */,
+				E3895B592087924E0075B96A /* Follow */,
+				E3895B5A2087924E0075B96A /* Profile */,
+				E3895B5B2087924E0075B96A /* Live */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		E3895B572087924E0075B96A /* Home */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		E3895B582087924E0075B96A /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Tools;
+			sourceTree = "<group>";
+		};
+		E3895B592087924E0075B96A /* Follow */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Follow;
+			sourceTree = "<group>";
+		};
+		E3895B5A2087924E0075B96A /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		E3895B5B2087924E0075B96A /* Live */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Live;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -272,7 +320,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "prg-change.DouYuZB";
+				PRODUCT_BUNDLE_IDENTIFIER = com.douyu.DouYuZB;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -291,7 +339,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "prg-change.DouYuZB";
+				PRODUCT_BUNDLE_IDENTIFIER = com.douyu.DouYuZB;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
