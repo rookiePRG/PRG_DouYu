@@ -23,9 +23,12 @@ class MainViewController: UITabBarController {
 
 //MARK: - 添加子控制器
 extension MainViewController {
-   fileprivate func addChildVC(tabTitle: String, childVC: UIViewController, normal_img: String, selected_img: String) {
+    fileprivate func addChildVC(navTitle: String = "", tabTitle: String, childVC: UIViewController, normal_img: String, selected_img: String) {
         
         let nav = UINavigationController(rootViewController: childVC)
+        if navTitle != "" {
+            nav.title = navTitle
+        }
         childVC.tabBarItem.title = tabTitle
         childVC.tabBarItem.setTitleTextAttributes([NSAttributedStringKey.foregroundColor: UIColor.orange], for: .selected)
         childVC.tabBarItem.image = UIImage(named: normal_img)
