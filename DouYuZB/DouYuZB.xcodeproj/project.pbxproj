@@ -62,56 +62,56 @@
 		E3895B562087924E0075B96A /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				E3895B5C208793330075B96A /* Main */,
-				E3895B572087924E0075B96A /* Home */,
-				E3895B592087924E0075B96A /* Follow */,
-				E3895B5A2087924E0075B96A /* Profile */,
-				E3895B5B2087924E0075B96A /* Live */,
-				E3895B582087924E0075B96A /* Tools */,
+				E3895B62208793F00075B96A /* Follow */,
+				E3895B61208793F00075B96A /* Home */,
+				E3895B5F208793F00075B96A /* Live */,
+				E3895B60208793F00075B96A /* Main */,
+				E3895B5D208793F00075B96A /* Profile */,
+				E3895B5E208793F00075B96A /* Tools */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
 		};
-		E3895B572087924E0075B96A /* Home */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Home;
-			sourceTree = "<group>";
-		};
-		E3895B582087924E0075B96A /* Tools */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Tools;
-			sourceTree = "<group>";
-		};
-		E3895B592087924E0075B96A /* Follow */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Follow;
-			sourceTree = "<group>";
-		};
-		E3895B5A2087924E0075B96A /* Profile */ = {
+		E3895B5D208793F00075B96A /* Profile */ = {
 			isa = PBXGroup;
 			children = (
 			);
 			path = Profile;
 			sourceTree = "<group>";
 		};
-		E3895B5B2087924E0075B96A /* Live */ = {
+		E3895B5E208793F00075B96A /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Tools;
+			sourceTree = "<group>";
+		};
+		E3895B5F208793F00075B96A /* Live */ = {
 			isa = PBXGroup;
 			children = (
 			);
 			path = Live;
 			sourceTree = "<group>";
 		};
-		E3895B5C208793330075B96A /* Main */ = {
+		E3895B60208793F00075B96A /* Main */ = {
 			isa = PBXGroup;
 			children = (
 			);
 			path = Main;
+			sourceTree = "<group>";
+		};
+		E3895B61208793F00075B96A /* Home */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		E3895B62208793F00075B96A /* Follow */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Follow;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
