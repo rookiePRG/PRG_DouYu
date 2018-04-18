@@ -62,11 +62,12 @@
 		E3895B562087924E0075B96A /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				E3895B5C208793330075B96A /* Main */,
 				E3895B572087924E0075B96A /* Home */,
-				E3895B582087924E0075B96A /* Tools */,
 				E3895B592087924E0075B96A /* Follow */,
 				E3895B5A2087924E0075B96A /* Profile */,
 				E3895B5B2087924E0075B96A /* Live */,
+				E3895B582087924E0075B96A /* Tools */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -104,6 +105,13 @@
 			children = (
 			);
 			path = Live;
+			sourceTree = "<group>";
+		};
+		E3895B5C208793330075B96A /* Main */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Main;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
