@@ -12,7 +12,7 @@ private let kTitleViewH : CGFloat = 40
 
 class HomeViewController: UIViewController {
 
-    //MARK: - lazy
+    //MARK: - 懒加载
     private lazy var pageTitleView : PageTitleView = {
         let titleView_frame = CGRect(x: 0, y: kStatusBarH + kNavigationBarH, width: kScreenW, height: kTitleViewH)
         let titles = ["推荐","游戏","娱乐","趣玩"]
