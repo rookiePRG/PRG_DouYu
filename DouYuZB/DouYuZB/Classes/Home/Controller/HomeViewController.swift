@@ -18,10 +18,12 @@ class HomeViewController: UIViewController {
         let titles = ["推荐","游戏","娱乐","趣玩"]
         let pageTitleView = PageTitleView(frame: titleView_frame, titles: titles)
         
+        pageTitleView.delegate = self
+        
         return pageTitleView
     }()
     
-    private lazy var pageContentView : PageContentView = {
+    private lazy var pageContentView : PageContentView = { [weak self] in
         let  contentH = kScreenH - kStatusBarH - kNavigationBarH - kTitleViewH
         let content_frame = CGRect(x: 0, y: kStatusBarH + kNavigationBarH + kTitleViewH, width: kScreenW, height: contentH)
         var childVCs = [UIViewController]()
@@ -31,6 +33,9 @@ class HomeViewController: UIViewController {
             childVCs.append(vc)
         }
         let contentView = PageContentView(frame: content_frame, childVCs: childVCs, parentVC: self)
+        
+        contentView.delegate = self
+        
         return contentView
     }()
     
@@ -77,4 +82,26 @@ extension HomeViewController {
         
         
     }
+}
+
+//MARK: - PageTitleViewDelegate
+extension HomeViewController: PageTitleViewDelegate {
+    func pageTitleView(_ titleView: PageTitleView, selectIndex: Int) {
+        pageContentView.setCurrentIndex(currentIndex: selectIndex)
+    }
+}
+
+//MARK: - PageContentViewDelegate
+extension HomeViewController: PageContentViewDelegate {
+    
+    
+    func pageContentView(contentView: PageContentView, progress: CGFloat, sourceIndex: Int, targetIndex: Int) {
+        pageTitleView.setProgress(progress: progress, sourceIndex: sourceIndex, targetIndex: targetIndex)
+    }
+    
+    func pageContentView(targetIndex: Int) {
+        pageTitleView.setBtn(targetIndex: targetIndex)
+    }
+    
+    
 }
