@@ -15,10 +15,25 @@ class HomeViewController: UIViewController {
     //MARK: - lazy
     private lazy var pageTitleView : PageTitleView = {
         let titleView_frame = CGRect(x: 0, y: kStatusBarH + kNavigationBarH, width: kScreenW, height: kTitleViewH)
-        let titles = ["推荐","游戏","娱乐","趣玩","网游","竞技","绝地","求生"]
+        let titles = ["推荐","游戏","娱乐","趣玩"]
         let pageTitleView = PageTitleView(frame: titleView_frame, titles: titles)
+        
         return pageTitleView
     }()
+    
+    private lazy var pageContentView : PageContentView = {
+        let  contentH = kScreenH - kStatusBarH - kNavigationBarH - kTitleViewH
+        let content_frame = CGRect(x: 0, y: kStatusBarH + kNavigationBarH + kTitleViewH, width: kScreenW, height: contentH)
+        var childVCs = [UIViewController]()
+        for _ in 0..<4 {
+            let vc = UIViewController()
+            vc.view.backgroundColor = UIColor(r: CGFloat(arc4random_uniform(255)), g: CGFloat(arc4random_uniform(255)), b: CGFloat(arc4random_uniform(255)), a: 1.0)
+            childVCs.append(vc)
+        }
+        let contentView = PageContentView(frame: content_frame, childVCs: childVCs, parentVC: self)
+        return contentView
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -38,6 +53,10 @@ extension HomeViewController {
         
         //添加TtileView
         view.addSubview(pageTitleView)
+        
+        //添加pageContentView
+        view.addSubview(pageContentView)
+        
     }
     
     private func setupNavigationBar() {
