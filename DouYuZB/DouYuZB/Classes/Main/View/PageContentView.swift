@@ -37,7 +37,7 @@ class PageContentView: UIView {
         layout.scrollDirection = .horizontal
         
         //创建collectionView
-        let collectionView = UICollectionView(frame: CGRect.zero, collectionViewLayout: layout)
+        let collectionView = UICollectionView(frame: (self?.bounds)!, collectionViewLayout: layout)
         collectionView.isPagingEnabled = true
         collectionView.showsHorizontalScrollIndicator = false
         collectionView.bounces = false
@@ -77,7 +77,6 @@ extension PageContentView {
         }
         
         //添加collectionView
-        collectionView.frame = bounds
         addSubview(collectionView)
         
     }
