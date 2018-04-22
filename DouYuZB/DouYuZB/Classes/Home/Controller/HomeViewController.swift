@@ -45,6 +45,7 @@ class HomeViewController: UIViewController {
         
         //设置UI界面
         setupUI()
+        
     }
 
 }
@@ -78,11 +79,6 @@ extension HomeViewController {
         navigationItem.rightBarButtonItems = [history_item, search_item, scan_item]
     }
     
-    private func setupTitleView() {
-        
-        
-        
-    }
 }
 
 //MARK: - PageTitleViewDelegate

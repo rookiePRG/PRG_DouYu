@@ -21,6 +21,9 @@ private let kHeaderViewID = "kHeaderViewID"
 class CommendViewController: UIViewController {
 
     //MARK: -lazy
+    
+    private lazy var commendVM: CommendViewModel = CommendViewModel()
+    
     private lazy var collectionView: UICollectionView = {[unowned self] in
         
         //创建Layout
@@ -55,6 +58,9 @@ class CommendViewController: UIViewController {
         view.backgroundColor = UIColor.white
         
         view.addSubview(collectionView)
+        
+        //网络请求
+        loadData()
     }
 
 }
@@ -97,6 +103,15 @@ extension CommendViewController : UICollectionViewDataSource,UICollectionViewDel
             return CGSize(width: kItemW, height: kPrettyItemH)
         }
         return CGSize(width: kItemW, height: kNormalItemH)
+    }
+    
+}
+
+//MARK: - 网络请求
+extension CommendViewController {
+   
+    private func loadData() {
+        commendVM.requestData()
     }
     
 }
