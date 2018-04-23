@@ -17,6 +17,10 @@
 		E38202EA208A33D00021749D /* CollectionNormalCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E38202E8208A33D00021749D /* CollectionNormalCell.xib */; };
 		E38202ED208A37C20021749D /* CollectionPrettyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E38202EB208A37C20021749D /* CollectionPrettyCell.swift */; };
 		E38202EE208A37C20021749D /* CollectionPrettyCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E38202EC208A37C20021749D /* CollectionPrettyCell.xib */; };
+		E3885A37208E3E3800B35C80 /* CollectionBaseCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3885A36208E3E3800B35C80 /* CollectionBaseCell.swift */; };
+		E3885A39208E4AEA00B35C80 /* CommendCycleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3885A38208E4AEA00B35C80 /* CommendCycleView.swift */; };
+		E3885A3B208E4B1100B35C80 /* CommendCycleView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E3885A3A208E4B1100B35C80 /* CommendCycleView.xib */; };
+		E3885A3D208E582700B35C80 /* CycleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3885A3C208E582700B35C80 /* CycleViewModel.swift */; };
 		E3895B4A2087906A0075B96A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3895B492087906A0075B96A /* AppDelegate.swift */; };
 		E3895B4C2087906B0075B96A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E3895B4B2087906B0075B96A /* Assets.xcassets */; };
 		E3895B4F2087906B0075B96A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E3895B4D2087906B0075B96A /* LaunchScreen.storyboard */; };
@@ -51,6 +55,10 @@
 		E38202E8208A33D00021749D /* CollectionNormalCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CollectionNormalCell.xib; sourceTree = "<group>"; };
 		E38202EB208A37C20021749D /* CollectionPrettyCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionPrettyCell.swift; sourceTree = "<group>"; };
 		E38202EC208A37C20021749D /* CollectionPrettyCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CollectionPrettyCell.xib; sourceTree = "<group>"; };
+		E3885A36208E3E3800B35C80 /* CollectionBaseCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionBaseCell.swift; sourceTree = "<group>"; };
+		E3885A38208E4AEA00B35C80 /* CommendCycleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CommendCycleView.swift; path = DouYuZB/Classes/Main/View/CommendCycleView.swift; sourceTree = SOURCE_ROOT; };
+		E3885A3A208E4B1100B35C80 /* CommendCycleView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = CommendCycleView.xib; path = DouYuZB/Classes/Main/View/CommendCycleView.xib; sourceTree = SOURCE_ROOT; };
+		E3885A3C208E582700B35C80 /* CycleViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CycleViewModel.swift; path = DouYuZB/Classes/Main/View/CycleViewModel.swift; sourceTree = SOURCE_ROOT; };
 		E3895B462087906A0075B96A /* DouYuZB.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DouYuZB.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E3895B492087906A0075B96A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E3895B4B2087906B0075B96A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -209,6 +217,8 @@
 			children = (
 				E38202E3208A2D090021749D /* CollectionHeaderView.swift */,
 				E38202E4208A2D090021749D /* CollectionHeaderView.xib */,
+				E3885A38208E4AEA00B35C80 /* CommendCycleView.swift */,
+				E3885A3A208E4B1100B35C80 /* CommendCycleView.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -216,6 +226,7 @@
 		E3895B7A20879EB80075B96A /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				E3885A3C208E582700B35C80 /* CycleViewModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -249,6 +260,7 @@
 				E38202E8208A33D00021749D /* CollectionNormalCell.xib */,
 				E38202EB208A37C20021749D /* CollectionPrettyCell.swift */,
 				E38202EC208A37C20021749D /* CollectionPrettyCell.xib */,
+				E3885A36208E3E3800B35C80 /* CollectionBaseCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -347,6 +359,7 @@
 				E38202EA208A33D00021749D /* CollectionNormalCell.xib in Resources */,
 				E38202EE208A37C20021749D /* CollectionPrettyCell.xib in Resources */,
 				E3895B7E20879EB80075B96A /* HomeViewController.xib in Resources */,
+				E3885A3B208E4B1100B35C80 /* CommendCycleView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -379,11 +392,13 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-DouYuZB/Pods-DouYuZB-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -423,9 +438,12 @@
 				E3CBDCA7208CF4DE007C5760 /* AnchorGroup.swift in Sources */,
 				12759DF92088896300C94CBB /* PageContentView.swift in Sources */,
 				E3895B8B2087B1C00075B96A /* PageTitleView.swift in Sources */,
+				E3885A37208E3E3800B35C80 /* CollectionBaseCell.swift in Sources */,
+				E3885A3D208E582700B35C80 /* CycleViewModel.swift in Sources */,
 				E3895B822087A2120075B96A /* UIBarButtonItem-Extension.swift in Sources */,
 				E3895B4A2087906A0075B96A /* AppDelegate.swift in Sources */,
 				E38202ED208A37C20021749D /* CollectionPrettyCell.swift in Sources */,
+				E3885A39208E4AEA00B35C80 /* CommendCycleView.swift in Sources */,
 				E3895B892087ADB80075B96A /* Common.swift in Sources */,
 				E3895B71208795D30075B96A /* FollowViewController.swift in Sources */,
 				E3895B7F20879EB80075B96A /* HomeViewController.swift in Sources */,

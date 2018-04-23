@@ -43,14 +43,14 @@
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="斗鱼官方直播间" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gox-cZ-b87">
                         <rect key="frame" x="5" y="128" width="79" height="14"/>
                         <fontDescription key="fontDescription" type="system" pointSize="11"/>
-                        <color key="textColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RJZ-na-KFj">
                         <rect key="frame" x="158" y="126" width="71" height="16"/>
                         <fontDescription key="fontDescription" type="system" pointSize="11"/>
                         <state key="normal" title="900万在线" image="Image_online">
-                            <color key="titleColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </state>
                     </button>
                 </subviews>
@@ -71,7 +71,13 @@
                 <constraint firstItem="gox-cZ-b87" firstAttribute="bottom" secondItem="AlE-aL-KQb" secondAttribute="bottom" constant="-5" id="qm2-t8-uvY"/>
             </constraints>
             <size key="customSize" width="234" height="181"/>
-            <point key="canvasLocation" x="-100" y="220.5"/>
+            <connections>
+                <outlet property="nickNameLab" destination="gox-cZ-b87" id="wcI-DS-3YA"/>
+                <outlet property="onlineBtn" destination="RJZ-na-KFj" id="lmZ-Vv-HKU"/>
+                <outlet property="roomNameLab" destination="RNb-38-qzc" id="n2f-Hr-l2K"/>
+                <outlet property="srcImageView" destination="AlE-aL-KQb" id="SGX-eM-wAp"/>
+            </connections>
+            <point key="canvasLocation" x="-313" y="215"/>
         </collectionViewCell>
     </objects>
     <resources>

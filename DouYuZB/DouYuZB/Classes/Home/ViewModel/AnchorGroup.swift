@@ -14,6 +14,10 @@ struct AnchorGroup {
     var icon_name: String = "home_header_normal"
     var room_list: [AnchorModel] = [AnchorModel]()
     
+    init() {
+        
+    }
+    
     init(json:JSON?) {
         
         tag_name = json!["tag_name"].stringValue
@@ -33,7 +37,12 @@ struct AnchorModel {
     var isVertical: String?
     var room_name: String?
     var nickname: String?
-    var online: String?
+    var online: Int?
+    var anchor_city: String?
+    
+    init() {
+        
+    }
     
     init(json:JSON?) {
         
@@ -42,7 +51,8 @@ struct AnchorModel {
         isVertical = json!["isVertical"].stringValue
         room_name = json!["room_name"].stringValue
         nickname = json!["nickname"].stringValue
-        online = json!["online"].stringValue
+        online = json!["online"].intValue
+        anchor_city = json!["anchor_city"].stringValue
     }
     
 }

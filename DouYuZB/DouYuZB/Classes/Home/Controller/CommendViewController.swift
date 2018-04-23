@@ -12,6 +12,7 @@ private let kItemMargin : CGFloat = 10
 private let kItemW : CGFloat = (kScreenW - 3*kItemMargin)/2
 private let kNormalItemH : CGFloat = kItemW * 3/4
 private let kPrettyItemH : CGFloat = kItemW * 4/3
+private let kCycleViewH = kScreenW * 3 / 8
 
 private let kNormalCellID = "kNormalCellID"
 private let kPrettyCellID = "kPrettyCellID"
@@ -52,12 +53,25 @@ class CommendViewController: UIViewController {
         
     }()
     
+    private lazy var cycleView: CommendCycleView = {
+        
+        let cycleView = CommendCycleView.commendCycleView()
+        cycleView.frame = CGRect(x: 0, y: -kCycleViewH, width: kScreenW, height: kCycleViewH)
+        cycleView.backgroundColor = UIColor.red
+        return cycleView
+        
+    }()
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         view.backgroundColor = UIColor.white
         
         view.addSubview(collectionView)
+        
+        collectionView.addSubview(cycleView)
+        collectionView.contentInset = UIEdgeInsets(top: kCycleViewH, left: 0, bottom: 0, right: 0)
         
         //网络请求
         loadData()
@@ -67,25 +81,29 @@ class CommendViewController: UIViewController {
 
 extension CommendViewController : UICollectionViewDataSource,UICollectionViewDelegateFlowLayout {
     func numberOfSections(in collectionView: UICollectionView) -> Int {
-        return 12
+        return self.commendVM.dataSource.count
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        if section == 0 {
-            return 8
-        }
-        return 4
+        let group = self.commendVM.dataSource[section]
+        return group.room_list.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
-        var cell : UICollectionViewCell
+        let group = self.commendVM.dataSource[indexPath.section]
+        let anchor = group.room_list[indexPath.item]
+        
+        
+        var cell : CollectionBaseCell!
         
         if indexPath.section == 1 {
-            cell = collectionView.dequeueReusableCell(withReuseIdentifier: kPrettyCellID, for: indexPath)
+            cell = collectionView.dequeueReusableCell(withReuseIdentifier: kPrettyCellID, for: indexPath) as! CollectionPrettyCell
         } else {
-            cell = collectionView.dequeueReusableCell(withReuseIdentifier: kNormalCellID, for: indexPath)
+            cell = collectionView.dequeueReusableCell(withReuseIdentifier: kNormalCellID, for: indexPath) as! CollectionNormalCell
         }
+        
+        cell.anchor = anchor
         
         return cell
         
@@ -94,7 +112,10 @@ extension CommendViewController : UICollectionViewDataSource,UICollectionViewDel
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
         
         //取出headerView
-        let headerView = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: kHeaderViewID, for: indexPath)
+        let headerView = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: kHeaderViewID, for: indexPath) as! CollectionHeaderView
+        let group = self.commendVM.dataSource[indexPath.section]
+        headerView.group = group
+        
         return headerView
     }
     
@@ -111,7 +132,13 @@ extension CommendViewController : UICollectionViewDataSource,UICollectionViewDel
 extension CommendViewController {
    
     private func loadData() {
-        commendVM.requestData()
+        commendVM.requestData {
+            self.collectionView.reloadData()
+        }
+        
+        commendVM.requestCycleViewData {
+            self.cycleView.cycleModels = self.commendVM.cycleSource
+        }
     }
     
 }
