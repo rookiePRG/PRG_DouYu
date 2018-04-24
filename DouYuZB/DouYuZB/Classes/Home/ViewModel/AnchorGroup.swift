@@ -12,6 +12,7 @@ struct AnchorGroup {
     
     var tag_name: String?
     var icon_name: String = "home_header_normal"
+    var icon_url: String?
     var room_list: [AnchorModel] = [AnchorModel]()
     
     init() {
@@ -21,6 +22,7 @@ struct AnchorGroup {
     init(json:JSON?) {
         
         tag_name = json!["tag_name"].stringValue
+        icon_url = json!["icon_url"].stringValue
         
         let roomList = json!["room_list"].array
         for dict in roomList! {

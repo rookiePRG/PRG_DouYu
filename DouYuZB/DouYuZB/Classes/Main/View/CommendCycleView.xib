@@ -27,10 +27,14 @@
                     </collectionViewFlowLayout>
                     <connections>
                         <outlet property="dataSource" destination="iN0-l3-epB" id="DGE-bu-zAs"/>
+                        <outlet property="delegate" destination="iN0-l3-epB" id="Ifw-WF-9QQ"/>
                     </connections>
                 </collectionView>
                 <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="rQb-yC-1OE">
-                    <rect key="frame" x="313" y="123" width="39" height="37"/>
+                    <rect key="frame" x="313" y="140" width="39" height="20"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="20" id="VOA-qr-hO2"/>
+                    </constraints>
                     <color key="pageIndicatorTintColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
                     <color key="currentPageIndicatorTintColor" red="1" green="0.57810515169999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                 </pageControl>
@@ -39,9 +43,9 @@
             <constraints>
                 <constraint firstItem="Okc-YX-xW8" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="0fb-xj-7JR"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="Okc-YX-xW8" secondAttribute="bottom" id="0qY-o9-28b"/>
-                <constraint firstItem="rQb-yC-1OE" firstAttribute="bottom" secondItem="vUN-kp-3ea" secondAttribute="bottom" id="I6A-Gt-P56"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="rQb-yC-1OE" secondAttribute="bottom" id="BDm-A2-W82"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="Okc-YX-xW8" secondAttribute="trailing" id="bNP-PM-s4b"/>
-                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="rQb-yC-1OE" secondAttribute="trailing" constant="10" id="qYH-OA-vyK"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="rQb-yC-1OE" secondAttribute="trailing" constant="10" id="vL5-u7-Vzh"/>
                 <constraint firstItem="Okc-YX-xW8" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="wvr-uy-Xcc"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
@@ -50,7 +54,7 @@
                 <outlet property="collectionView" destination="Okc-YX-xW8" id="zTi-pF-nnZ"/>
                 <outlet property="pageControl" destination="rQb-yC-1OE" id="dOh-VB-U3Q"/>
             </connections>
-            <point key="canvasLocation" x="-103" y="-767"/>
+            <point key="canvasLocation" x="-316" y="-768"/>
         </view>
     </objects>
 </document>

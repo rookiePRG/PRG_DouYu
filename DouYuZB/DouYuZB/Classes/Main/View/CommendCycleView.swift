@@ -13,10 +13,20 @@ private let kCycleViewCellID = "kCycleViewCellID"
 class CommendCycleView: UIView {
     
     //MARK: 定义属性
+    
+    var cycleTimer: Timer?
+    
     var cycleModels : [cycleViewModel]? {
         didSet {
             collectionView.reloadData()
             pageControl.numberOfPages = cycleModels?.count ?? 0
+            
+            let indexPath = IndexPath(item: (cycleModels?.count ?? 0) * 100, section: 0)
+            collectionView.scrollToItem(at: indexPath, at: .left, animated: false)
+            
+            //添加定时器
+            removeCycleTimer()
+            addCycleTimer()
         }
     }
 
@@ -26,8 +36,8 @@ class CommendCycleView: UIView {
         super.awakeFromNib()
         
         autoresizingMask = UIViewAutoresizing()
-        collectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: kCycleViewCellID)
-        
+//        collectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: kCycleViewCellID)
+        collectionView.register(UINib(nibName: "CollectionCycleCell", bundle: nil), forCellWithReuseIdentifier: kCycleViewCellID)
     }
     
     override func layoutSubviews() {
@@ -53,18 +63,64 @@ extension CommendCycleView {
     
 }
 
+//MARK: - UICollectionViewDataSource
 extension CommendCycleView: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return cycleModels?.count ?? 0
+        return (cycleModels?.count ?? 0) * 10000
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: kCycleViewCellID, for: indexPath)
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: kCycleViewCellID, for: indexPath) as! CollectionCycleCell
         
-        cell.backgroundColor = indexPath.item % 2 == 0 ? UIColor.red : UIColor.blue
+        cell.cycleModel = cycleModels?[indexPath.item % (cycleModels?.count)!]
+        
         return cell
+    }
+    
+}
+
+//MARK: - UICollectionViewDelegate
+extension CommendCycleView: UICollectionViewDelegate {
+    
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        
+        // 1.获取滚动的偏移量
+        let offsetX = scrollView.contentOffset.x + scrollView.bounds.width * 0.5
+        
+        // 2.计算pageControl的currentIndex
+        pageControl.currentPage = Int(offsetX / scrollView.bounds.width) % (cycleModels?.count ?? 1)
+    }
+    
+    func scrollViewWillBeginDragging(_ scrollView: UIScrollView) {
+        removeCycleTimer()
+    }
+    
+    func scrollViewDidEndDragging(_ scrollView: UIScrollView, willDecelerate decelerate: Bool) {
+        addCycleTimer()
+    }
+    
+}
+
+//MARK: - 添加定时器
+extension CommendCycleView {
+    
+    fileprivate func addCycleTimer() {
+        cycleTimer = Timer(timeInterval: 3.0, target: self, selector: #selector(scrollNext), userInfo: nil, repeats: true)
+        RunLoop.main.add(cycleTimer!, forMode: RunLoopMode.commonModes)
+    }
+    
+    @objc fileprivate func scrollNext() {
+        
+        let currectOffsetX = collectionView.contentOffset.x
+        
+        collectionView.setContentOffset(CGPoint(x: currectOffsetX + collectionView.bounds.width, y: 0), animated: true)
+    }
+    
+    fileprivate func removeCycleTimer() {
+        cycleTimer?.invalidate()
+        cycleTimer = nil
     }
     
 }

@@ -13,6 +13,7 @@ private let kItemW : CGFloat = (kScreenW - 3*kItemMargin)/2
 private let kNormalItemH : CGFloat = kItemW * 3/4
 private let kPrettyItemH : CGFloat = kItemW * 4/3
 private let kCycleViewH = kScreenW * 3 / 8
+private let kGameViewH: CGFloat = 90
 
 private let kNormalCellID = "kNormalCellID"
 private let kPrettyCellID = "kPrettyCellID"
@@ -56,10 +57,17 @@ class CommendViewController: UIViewController {
     private lazy var cycleView: CommendCycleView = {
         
         let cycleView = CommendCycleView.commendCycleView()
-        cycleView.frame = CGRect(x: 0, y: -kCycleViewH, width: kScreenW, height: kCycleViewH)
+        cycleView.frame = CGRect(x: 0, y: -kCycleViewH-kGameViewH, width: kScreenW, height: kCycleViewH)
         cycleView.backgroundColor = UIColor.red
         return cycleView
         
+    }()
+    
+    private lazy var gameView: CommendGameView = {
+        let gameView = CommendGameView.commendGameView()
+        gameView.frame = CGRect(x: 0, y: -kGameViewH, width: kScreenW, height: kGameViewH)
+        gameView.backgroundColor = UIColor.red
+        return gameView
     }()
     
     
@@ -71,7 +79,10 @@ class CommendViewController: UIViewController {
         view.addSubview(collectionView)
         
         collectionView.addSubview(cycleView)
-        collectionView.contentInset = UIEdgeInsets(top: kCycleViewH, left: 0, bottom: 0, right: 0)
+        
+        collectionView.addSubview(gameView)
+        
+        collectionView.contentInset = UIEdgeInsets(top: kCycleViewH+kGameViewH, left: 0, bottom: 0, right: 0)
         
         //网络请求
         loadData()
@@ -134,6 +145,21 @@ extension CommendViewController {
     private func loadData() {
         commendVM.requestData {
             self.collectionView.reloadData()
+            
+            // 2.将数据传递给GameView
+            var groups = self.commendVM.dataSource
+            
+            // 2.1.移除前两组数据
+            groups.removeFirst()
+            groups.removeFirst()
+            
+            // 2.2.添加更多组
+            var moreGroup = AnchorGroup()
+            moreGroup.tag_name = "更多"
+            groups.append(moreGroup)
+            
+            self.gameView.groups = groups
+            
         }
         
         commendVM.requestCycleViewData {
