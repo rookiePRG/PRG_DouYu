@@ -35,6 +35,7 @@ class CommendCycleView: UIView {
     override func awakeFromNib() {
         super.awakeFromNib()
         
+        // 让控件不随着父控件的拉伸而拉伸
         autoresizingMask = UIViewAutoresizing()
 //        collectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: kCycleViewCellID)
         collectionView.register(UINib(nibName: "CollectionCycleCell", bundle: nil), forCellWithReuseIdentifier: kCycleViewCellID)

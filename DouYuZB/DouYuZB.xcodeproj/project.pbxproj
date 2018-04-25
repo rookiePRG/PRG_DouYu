@@ -46,6 +46,7 @@
 		E3CBDCA5208CF419007C5760 /* CommendViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3CBDCA4208CF419007C5760 /* CommendViewModel.swift */; };
 		E3CBDCA7208CF4DE007C5760 /* AnchorGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3CBDCA6208CF4DE007C5760 /* AnchorGroup.swift */; };
 		E3CBDCA9208CF8D0007C5760 /* NSDate-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3CBDCA8208CF8D0007C5760 /* NSDate-Extension.swift */; };
+		E3EA854A2090D6DD00093B53 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3EA85492090D6DD00093B53 /* GameViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -92,6 +93,7 @@
 		E3CBDCA4208CF419007C5760 /* CommendViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommendViewModel.swift; sourceTree = "<group>"; };
 		E3CBDCA6208CF4DE007C5760 /* AnchorGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AnchorGroup.swift; path = DouYuZB/Classes/Home/ViewModel/AnchorGroup.swift; sourceTree = SOURCE_ROOT; };
 		E3CBDCA8208CF8D0007C5760 /* NSDate-Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSDate-Extension.swift"; sourceTree = "<group>"; };
+		E3EA85492090D6DD00093B53 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -255,6 +257,7 @@
 				E3895B7C20879EB80075B96A /* HomeViewController.xib */,
 				E3895B7D20879EB80075B96A /* HomeViewController.swift */,
 				E38202E1208A24D50021749D /* CommendViewController.swift */,
+				E3EA85492090D6DD00093B53 /* GameViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -453,6 +456,7 @@
 				E3CBDCA5208CF419007C5760 /* CommendViewModel.swift in Sources */,
 				12759DFB20888B1C00C94CBB /* UIColor-Extension.swift in Sources */,
 				E3CBDCA9208CF8D0007C5760 /* NSDate-Extension.swift in Sources */,
+				E3EA854A2090D6DD00093B53 /* GameViewController.swift in Sources */,
 				E3895B75208795E50075B96A /* ProfileViewController.swift in Sources */,
 				E38202E2208A24D50021749D /* CommendViewController.swift in Sources */,
 				E38202E9208A33D00021749D /* CollectionNormalCell.swift in Sources */,
