@@ -31,7 +31,8 @@
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="7AQ-Oh-tLg">
                         <rect key="frame" x="18" y="7" width="45" height="45"/>
                         <constraints>
-                            <constraint firstAttribute="height" constant="45" id="vkw-4O-G2R"/>
+                            <constraint firstAttribute="width" constant="45" id="LIz-TV-VoI"/>
+                            <constraint firstAttribute="height" constant="45" id="N1W-al-wiq"/>
                         </constraints>
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
@@ -43,10 +44,9 @@
                 </subviews>
             </view>
             <constraints>
-                <constraint firstItem="UDx-G0-auk" firstAttribute="top" secondItem="7AQ-Oh-tLg" secondAttribute="bottom" constant="10" id="4KM-Jz-99Z"/>
-                <constraint firstAttribute="trailing" secondItem="7AQ-Oh-tLg" secondAttribute="trailing" constant="17.5" id="Vi9-H9-czT"/>
+                <constraint firstItem="7AQ-Oh-tLg" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="6uC-iE-Owt"/>
                 <constraint firstAttribute="bottom" secondItem="UDx-G0-auk" secondAttribute="bottom" constant="15" id="eVE-Im-Ecr"/>
-                <constraint firstItem="7AQ-Oh-tLg" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="17.5" id="lVb-QV-6oG"/>
+                <constraint firstItem="UDx-G0-auk" firstAttribute="top" secondItem="7AQ-Oh-tLg" secondAttribute="bottom" constant="10" id="nee-I6-pgT"/>
                 <constraint firstAttribute="trailing" secondItem="UDx-G0-auk" secondAttribute="trailing" id="qKa-0R-1CI"/>
                 <constraint firstItem="UDx-G0-auk" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="sr1-0n-zhU"/>
             </constraints>

@@ -8,11 +8,10 @@
 
 import UIKit
 
-class CommendViewModel {
+class CommendViewModel: BaseViewModel {
     
     //MARK: - lazy
     lazy var cycleSource:[cycleViewModel] = [cycleViewModel]()
-    lazy var dataSource:[AnchorGroup] = [AnchorGroup]()
     private var hotDataGroup: AnchorGroup = AnchorGroup()
     private var prettyDataGroup: AnchorGroup = AnchorGroup()
     
@@ -82,20 +81,8 @@ extension CommendViewModel {
         //5.获取2-12组的数据
         //5.1 加入组
         dGroup.enter()
-        NetworkTools.requestData("http://capi.douyucdn.cn/api/v1/getHotCate", requestType: .GET, parameters: parameters, success: { (resulet) in
-            
-            //5.2数据转模型
-            let datas = resulet["data"].array
-            for dict in datas! {
-                self.dataSource.append(AnchorGroup(json: dict))
-            }
-            
-            //5.3离开组
-            dGroup.leave()
-            
-        }) {
-            print("请求失败")
-            //离开组
+        
+        requestData(URLString: "http://capi.douyucdn.cn/api/v1/getHotCate", parameters: parameters) {
             dGroup.leave()
         }
         
