@@ -16,6 +16,10 @@
 		E37533BF208F76DB00D7F75E /* CommendGameView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E37533BE208F76DB00D7F75E /* CommendGameView.xib */; };
 		E37533C2208F839F00D7F75E /* CollectionGameCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E37533C0208F839F00D7F75E /* CollectionGameCell.swift */; };
 		E37533C3208F839F00D7F75E /* CollectionGameCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E37533C1208F839F00D7F75E /* CollectionGameCell.xib */; };
+		E37A9363209A09340060A8B8 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E37A9362209A09340060A8B8 /* BaseViewController.swift */; };
+		E37A9365209A11CC0060A8B8 /* CustomNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E37A9364209A11CC0060A8B8 /* CustomNavigationController.swift */; };
+		E37A936A209A13F20060A8B8 /* RoomNormalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E37A9369209A13F20060A8B8 /* RoomNormalViewController.swift */; };
+		E37A936C209A15B10060A8B8 /* RoomShowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E37A936B209A15B10060A8B8 /* RoomShowViewController.swift */; };
 		E38202E2208A24D50021749D /* CommendViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E38202E1208A24D50021749D /* CommendViewController.swift */; };
 		E38202E5208A2D090021749D /* CollectionHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E38202E3208A2D090021749D /* CollectionHeaderView.swift */; };
 		E38202E6208A2D090021749D /* CollectionHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E38202E4208A2D090021749D /* CollectionHeaderView.xib */; };
@@ -69,6 +73,10 @@
 		E37533BE208F76DB00D7F75E /* CommendGameView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = CommendGameView.xib; path = DouYuZB/Classes/Main/View/CommendGameView.xib; sourceTree = SOURCE_ROOT; };
 		E37533C0208F839F00D7F75E /* CollectionGameCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CollectionGameCell.swift; path = DouYuZB/Classes/Main/View/CollectionGameCell.swift; sourceTree = SOURCE_ROOT; };
 		E37533C1208F839F00D7F75E /* CollectionGameCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = CollectionGameCell.xib; path = DouYuZB/Classes/Main/View/CollectionGameCell.xib; sourceTree = SOURCE_ROOT; };
+		E37A9362209A09340060A8B8 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		E37A9364209A11CC0060A8B8 /* CustomNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNavigationController.swift; sourceTree = "<group>"; };
+		E37A9369209A13F20060A8B8 /* RoomNormalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomNormalViewController.swift; sourceTree = "<group>"; };
+		E37A936B209A15B10060A8B8 /* RoomShowViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomShowViewController.swift; sourceTree = "<group>"; };
 		E38202E1208A24D50021749D /* CommendViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommendViewController.swift; sourceTree = "<group>"; };
 		E38202E3208A2D090021749D /* CollectionHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = CollectionHeaderView.swift; path = DouYuZB/Classes/Home/Controller/CollectionHeaderView.swift; sourceTree = SOURCE_ROOT; };
 		E38202E4208A2D090021749D /* CollectionHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = CollectionHeaderView.xib; path = DouYuZB/Classes/Home/Controller/CollectionHeaderView.xib; sourceTree = SOURCE_ROOT; };
@@ -141,6 +149,23 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		E37A9367209A13D10060A8B8 /* Room */ = {
+			isa = PBXGroup;
+			children = (
+				E37A9368209A13D10060A8B8 /* Controller */,
+			);
+			path = Room;
+			sourceTree = "<group>";
+		};
+		E37A9368209A13D10060A8B8 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				E37A9369209A13F20060A8B8 /* RoomNormalViewController.swift */,
+				E37A936B209A15B10060A8B8 /* RoomShowViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
 		E3895B3D2087906A0075B96A = {
 			isa = PBXGroup;
 			children = (
@@ -174,6 +199,7 @@
 		E3895B562087924E0075B96A /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				E37A9367209A13D10060A8B8 /* Room */,
 				E3895B62208793F00075B96A /* Follow */,
 				E3895B61208793F00075B96A /* Home */,
 				E3895B5F208793F00075B96A /* Live */,
@@ -313,6 +339,8 @@
 			children = (
 				E3895B852087AD670075B96A /* MainViewController.swift */,
 				E3ADC30820936D5900F9EEE3 /* BaseAnchorViewController.swift */,
+				E37A9362209A09340060A8B8 /* BaseViewController.swift */,
+				E37A9364209A11CC0060A8B8 /* CustomNavigationController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -488,6 +516,7 @@
 			files = (
 				E3895B782087960A0075B96A /* NetworkTools.swift in Sources */,
 				E3CBDCA5208CF419007C5760 /* CommendViewModel.swift in Sources */,
+				E37A9363209A09340060A8B8 /* BaseViewController.swift in Sources */,
 				12759DFB20888B1C00C94CBB /* UIColor-Extension.swift in Sources */,
 				E3CBDCA9208CF8D0007C5760 /* NSDate-Extension.swift in Sources */,
 				E3EA854A2090D6DD00093B53 /* GameViewController.swift in Sources */,
@@ -517,6 +546,9 @@
 				E38202E5208A2D090021749D /* CollectionHeaderView.swift in Sources */,
 				E3ADC314209391B500F9EEE3 /* AmuserMenuView.swift in Sources */,
 				E3895B6D208795C00075B96A /* LiveViewController.swift in Sources */,
+				E37A936C209A15B10060A8B8 /* RoomShowViewController.swift in Sources */,
+				E37A9365209A11CC0060A8B8 /* CustomNavigationController.swift in Sources */,
+				E37A936A209A13F20060A8B8 /* RoomNormalViewController.swift in Sources */,
 				E3895B872087AD670075B96A /* MainViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

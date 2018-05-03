@@ -25,7 +25,7 @@ class MainViewController: UITabBarController {
 extension MainViewController {
     fileprivate func addChildVC(navTitle: String = "", tabTitle: String, childVC: UIViewController, normal_img: String, selected_img: String) {
         
-        let nav = UINavigationController(rootViewController: childVC)
+        let nav = CustomNavigationController(rootViewController: childVC)
         if navTitle != "" {
             nav.title = navTitle
         }

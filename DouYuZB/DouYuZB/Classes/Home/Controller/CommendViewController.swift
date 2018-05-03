@@ -94,6 +94,8 @@ extension CommendViewController {
             
             self.gameView.groups = groups
             
+            self.loadDataFinished()
+            
         }
         commendVM.requestCycleViewData {
             self.cycleView.cycleModels = self.commendVM.cycleSource
